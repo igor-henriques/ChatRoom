@@ -14,6 +14,8 @@ public abstract class QueuePublisher : IPublisher, IDisposable
 
     public QueuePublisher(IConnectionFactory connectionFactory, ILogger<QueuePublisher> logger, string queueName)
     {
+        connectionFactory.RequestedHeartbeat = TimeSpan.FromSeconds(60);
+
         _logger = logger;
         _queueName = queueName;
         _connection = connectionFactory.CreateConnection();

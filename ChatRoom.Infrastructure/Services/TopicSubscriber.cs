@@ -19,6 +19,8 @@ public abstract class TopicSubscriber : ISubscriber, IDisposable
 
     public TopicSubscriber(IConnectionFactory connectionFactory, ILogger<TopicSubscriber> logger)
     {
+        connectionFactory.RequestedHeartbeat = TimeSpan.FromSeconds(60);
+
         _logger = logger;
 
         _connection = connectionFactory.CreateConnection();

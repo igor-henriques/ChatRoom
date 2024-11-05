@@ -34,7 +34,7 @@ public sealed class Worker(
             await RunMigrationAsync(dbContext, cancellationToken);
 
             logger.LogInformation("Seeding data into the database");
-            await SeedDataAsync(serviceProvider);
+            //await SeedDataAsync(serviceProvider);
         }
         catch (Exception ex)
         {

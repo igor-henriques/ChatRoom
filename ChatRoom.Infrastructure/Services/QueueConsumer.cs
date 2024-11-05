@@ -17,6 +17,8 @@ public abstract class QueueConsumer : ISubscriber, IDisposable
 
     public QueueConsumer(IConnectionFactory connectionFactory, ILogger<QueueConsumer> logger)
     {
+        connectionFactory.RequestedHeartbeat = TimeSpan.FromSeconds(60);
+
         _logger = logger;
 
         _connection = connectionFactory.CreateConnection();

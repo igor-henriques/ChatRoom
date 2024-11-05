@@ -14,8 +14,10 @@ public abstract class TopicPublisher : IPublisher, IDisposable
 
     public TopicPublisher(IConnectionFactory connectionFactory, ILogger<TopicPublisher> logger, string exchangeName)
     {
+        connectionFactory.RequestedHeartbeat = TimeSpan.FromSeconds(60);
+
         _logger = logger;
-        _exchangeName = exchangeName;
+        _exchangeName = exchangeName;        
         _connection = connectionFactory.CreateConnection();
         _channel = _connection.CreateModel();
         _channel.ExchangeDeclare(exchange: exchangeName, type: ExchangeType.Fanout, durable: true, autoDelete: false);
