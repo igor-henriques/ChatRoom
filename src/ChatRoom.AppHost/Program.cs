@@ -17,13 +17,18 @@ var messageBroker = builder.AddRabbitMQ("chatbroker", password: messageBrokerPas
     .WithManagementPlugin()
     .WithDataVolume(isReadOnly: false);
 
+var migration = builder.AddProject<Projects.ChatRoom_MigrationService>("migrations")
+    .WithReference(postgres)
+    .WaitFor(postgres);
+
 var apiService = builder.AddProject<Projects.ChatRoom_ApiService>("apiservice")
     .WithReference(postgres)
     .WithReference(redis)
     .WithReference(messageBroker)
     .WaitFor(postgres)
     .WaitFor(redis)
-    .WaitFor(messageBroker);
+    .WaitFor(messageBroker)
+    .WaitForCompletion(migration);
 
 builder.AddProject<Projects.ChatRoom_Web>("webfrontend")
     .WithExternalHttpEndpoints()
@@ -34,28 +39,28 @@ builder.AddProject<Projects.ChatRoom_Web>("webfrontend")
     .WaitFor(apiService)
     .WaitFor(postgres)
     .WaitFor(messageBroker)
-    .WaitFor(redis);
-
-builder.AddProject<Projects.ChatRoom_MigrationService>("migrations")
-    .WithReference(postgres)
-    .WaitFor(postgres);
+    .WaitFor(redis)
+    .WaitForCompletion(migration);
 
 builder.AddProject<Projects.ChatRoom_Messages_PersistenceConsumer>("chatroom-messages-persistenceconsumer")
     .WithReference(messageBroker)
     .WithReference(apiService)
     .WaitFor(messageBroker)
-    .WaitFor(apiService);
+    .WaitFor(apiService)
+    .WaitForCompletion(migration); 
 
 builder.AddProject<Projects.ChatRoom_Messages_BotConsumer>("chatroom-messages-botconsumer")
     .WithReference(messageBroker)
     .WithReference(apiService)
     .WaitFor(messageBroker)
-    .WaitFor(apiService);
+    .WaitFor(apiService)
+    .WaitForCompletion(migration);
 
 builder.AddProject<Projects.ChatRoom_Messages_Fanout>("chatroom-messages-realtimefanout")
     .WithReference(messageBroker)
     .WithReference(apiService)
     .WaitFor(messageBroker)
-    .WaitFor(apiService);
+    .WaitFor(apiService)
+    .WaitForCompletion(migration);
 
 await builder.Build().RunAsync();

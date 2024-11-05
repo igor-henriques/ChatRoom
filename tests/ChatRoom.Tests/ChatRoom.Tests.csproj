@@ -17,8 +17,9 @@
     <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
   </ItemGroup>
 
+
   <ItemGroup>
-    <ProjectReference Include="..\ChatRoom.AppHost\ChatRoom.AppHost.csproj" />
+    <ProjectReference Include="..\..\src\ChatRoom.AppHost\ChatRoom.AppHost.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -4,17 +4,13 @@
 		<TargetFramework>net8.0</TargetFramework>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
-		<UserSecretsId>dotnet-ChatRoom.Messages.Consumer-7d409203-c977-4e07-9e95-2a0bc7203ca5</UserSecretsId>
+		<UserSecretsId>dotnet-ChatRoom.Messages.BotConsumer-35e6f11e-3b0b-42aa-9404-74c5dd6f12c3</UserSecretsId>
 		<NoWarn>IDE0290</NoWarn>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<Content Include="Properties\launchSettings.json" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<PackageReference Include="Aspire.RabbitMQ.Client" Version="8.2.2" />
 		<PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
+		<PackageReference Include="Aspire.RabbitMQ.Client" Version="8.2.2" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 		<PackageReference Include="Serilog" Version="4.1.0" />
 		<PackageReference Include="Serilog.Enrichers.Environment" Version="2.3.0" />
@@ -24,9 +20,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\ChatRoom.Infrastructure\ChatRoom.Infrastructure.csproj" />
-		<ProjectReference Include="..\ChatRoom.Messages.Common\ChatRoom.Messages.Common.csproj" />
-		<ProjectReference Include="..\ChatRoom.ServiceDefaults\ChatRoom.ServiceDefaults.csproj" />
-		<ProjectReference Include="..\ClassRoom.Domain\ChatRoom.Domain.csproj" />
+	  <ProjectReference Include="..\..\ChatRoom.Infrastructure\ChatRoom.Infrastructure.csproj" />
+	  <ProjectReference Include="..\..\ChatRoom.ServiceDefaults\ChatRoom.ServiceDefaults.csproj" />
+	  <ProjectReference Include="..\..\ClassRoom.Domain\ChatRoom.Domain.csproj" />
 	</ItemGroup>
 </Project>

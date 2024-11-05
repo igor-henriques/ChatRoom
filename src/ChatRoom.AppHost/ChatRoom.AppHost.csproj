@@ -11,11 +11,11 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\ChatRoom.ApiService\ChatRoom.ApiService.csproj" />
-		<ProjectReference Include="..\ChatRoom.Messages.BotConsumer\ChatRoom.Messages.BotConsumer.csproj" />
-		<ProjectReference Include="..\ChatRoom.Messages.Consumer\ChatRoom.Messages.PersistenceConsumer.csproj" />
 		<ProjectReference Include="..\ChatRoom.MigrationService\ChatRoom.MigrationService.csproj" />
 		<ProjectReference Include="..\ChatRoom.Web\ChatRoom.Web.csproj" />
-		<ProjectReference Include="..\src\ChatRoom.Messages.Fanout\ChatRoom.Messages.Fanout.csproj" />
+		<ProjectReference Include="..\Consumers\ChatRoom.Messages.BotConsumer\ChatRoom.Messages.BotConsumer.csproj" />
+		<ProjectReference Include="..\Consumers\ChatRoom.Messages.Consumer\ChatRoom.Messages.PersistenceConsumer.csproj" />
+		<ProjectReference Include="..\Consumers\ChatRoom.Messages.Fanout\ChatRoom.Messages.Fanout.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
