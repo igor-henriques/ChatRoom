@@ -4,7 +4,7 @@ This project is a real-time chat application built on the .NET Aspire framework.
 
 ## **Overview**
 
-The chat application allows users to communicate in real-time. Users can send messages, and the system validates commands related to stock information. The message flow is designed to ensure that commands are processed efficiently and that all active WebSocket clients receive updates immediately after message persistence.
+The chat application allows users to communicate in real-time. Users can send messages, and the system validates commands related to stock information. The message flow is designed to ensure that commands are processed efficiently and that all active WebSocket clients receive updates immediately after message persistence. Being an Aspire application, everything here is ready-to-go and can easily be pushed to some kubernetes. Production ready.
 
 ## **Technologies Used**
 
