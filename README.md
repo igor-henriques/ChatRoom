@@ -80,3 +80,4 @@ Potential future enhancements include:
 - Improved error handling and resilience across services.
 - Enhanced stock command validation with additional data sources.
 - Real time broadcasting regarding new chats being created. Now the page needs to be refreshed.
+- It is a known bug that stock commands only will be echoed back from the bot if two or more users are in the chat.
