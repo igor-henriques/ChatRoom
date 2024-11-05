@@ -31,6 +31,8 @@ try
 
     var host = builder.Build();
 
+    await Task.Delay(TimeSpan.FromSeconds(5));
+
     host.Run();
 }
 catch (Exception ex)
