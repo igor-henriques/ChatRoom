@@ -59,8 +59,10 @@ To run this application locally, ensure you have the following services availabl
 
 ### Running the Application:
 
-1. Start the project by running *ChatRoom.AppHost*
-2. Open the Web application in your browser, create an account and initiate a chat session at */chats*.
+1. Make sure to have Aspire installed by running the following command **before opening Visual Studio**: *dotnet workload update*. Note that if you run this command with Visual Studio opened, you'll need to restart it in order to build the project.
+2. Make sure Docker is up and running
+3. Start the project by running *ChatRoom.AppHost*
+4. Once Aspire is running, a dashboard with all services will be shown. Select the last one, named *webfrontend*. A web application should open in your browser, create an account and initiate a chat session at */chats*.
 
 ### Sending Messages:
 
