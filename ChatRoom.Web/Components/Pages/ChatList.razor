@@ -1,0 +1,27 @@
+﻿@page "/chats"
+
+<div class="container mt-5">
+    <h3 class="mb-4">Lista de Chats</h3>
+
+    <div class="mb-4">
+        <input type="text" @bind="NewChatName" placeholder="Nome do novo chat" class="form-control mb-2" />
+        <button class="btn btn-primary" @onclick="CreateChatAsync">Criar Chat</button>
+    </div>
+
+    <div class="list-group">
+        @foreach (var chat in Chats)
+        {
+            <div class="d-flex justify-content-between align-items-center list-group-item list-group-item-action">
+                <a href="@($"/chat/{chat.Id}")" class="text-decoration-none flex-grow-1">
+                    <strong>@chat.Name</strong> - Criado por: @chat.CreatedByUser!.FilteredUserName
+                </a>
+                @if (chat.CreatedByUserId == CurrentUserId)
+                {
+                    <button class="btn btn-danger btn-sm" @onclick="() => DeleteChatAsync(chat.Id.GetValueOrDefault())">
+                        <i class="bi bi-trash"></i> Excluir
+                    </button>
+                }
+            </div>
+        }
+    </div>
+</div>
