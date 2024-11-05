@@ -43,9 +43,9 @@ The solution is organized into several key projects:
 - **Web Project**: Handles the user interface and front-end interactions. It publishes messages to the RabbitMQ exchange.
 - **API Project**: Serves as the backend for interacting with the database and handling business logic for message persistence.
 - **Consumers**: Background services that handle message validation, persistence, and broadcasting. The two primary consumers are:
-  - Stock Command Validation Consumer
-  - Message Persistence Consumer
-  - WebSocket fanout Consumer
+  - Stock Command Validation exchange Consumer
+  - Message Persistence exchange Consumer
+  - WebSocket fanout queue Consumer
 - **WebSocket Endpoint**: Manages real-time connections to deliver live updates directly to users.
 
 ## **Setup and Configuration**
