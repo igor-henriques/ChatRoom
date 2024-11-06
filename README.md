@@ -84,5 +84,5 @@ Potential future enhancements include:
 
 ## **Time Spent**<br><br>
 
-![wakatime](https://imgur.com/AMLtO1B)
+![wakatime]([img]https://i.imgur.com/AMLtO1B.png[/img])
 Find more details about it: https://wakatime.com/@d10bb6b8-72fb-4147-ad98-2856ecb3621d/projects/lascsnsuna?start=2024-10-30&end=2024-11-05
