@@ -83,6 +83,6 @@ Potential future enhancements include:
 - It is a known bug that stock commands only will be echoed back from the bot if two or more users are in the chat.
 
 ## **Time Spent**
-![wakatime](https://i.imgur.com/weFL9V2.png)
+[Imgur](https://imgur.com/AMLtO1B)
 
 Find more details about it: https://wakatime.com/@d10bb6b8-72fb-4147-ad98-2856ecb3621d/projects/lascsnsuna?start=2024-10-30&end=2024-11-05
