@@ -82,7 +82,7 @@ Potential future enhancements include:
 - Real time broadcasting regarding new chats being created. Now the page needs to be refreshed.
 - It is a known bug that stock commands only will be echoed back from the bot if two or more users are in the chat.
 
-## **Time Spent**
+## **Time Spent**: 28 hours
 
-![wakatime](https://i.imgur.com/DKJvTMz)
+![wakatime](https://i.imgur.com/DKJvTMz.png)
 Find more details about it: https://wakatime.com/@d10bb6b8-72fb-4147-ad98-2856ecb3621d/projects/lascsnsuna?start=2024-10-30&end=2024-11-05
