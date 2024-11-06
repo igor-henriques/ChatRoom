@@ -13,6 +13,10 @@ The chat application allows users to communicate in real-time. Users can send me
 - **RabbitMQ**: Manages message queues and topics to coordinate between services.
 - **WebSocket**: Delivers real-time updates to connected users.
 
+## System Architecture Diagram
+
+![System Architecture Diagram](https://www.mermaidchart.com/raw/aac5eb28-7c9c-4976-9e77-d16eb2e6c501?theme=light&version=v0.1&format=svg)
+
 ## **Architecture and Message Flow**
 
 The architecture relies on a layered message flow across multiple services, ensuring messages are handled securely, validated, and delivered in real-time. Here’s an overview of the message flow:
